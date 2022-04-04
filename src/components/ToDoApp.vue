@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div>
+  <div class="container p-3 my-3 border bg-white border-dark rounded">
     <h2 class="text-center">ToDo App</h2>
 
       <h5 class="text-center mt-4" :style="`color: ${color}`">{{message}}</h5>
@@ -11,7 +12,7 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-around">
+      <div :style="`display: ${disp}`" class="d-flex justify-content-around my-2 bg-dark border border-dark rounded">
 
         <div class="p-1" :style="`display: ${disp}`">
           <input v-model="task" type="text" placeholder="Enter Task" class="form-control" v-on:keyup.enter="submitTask">
@@ -51,7 +52,7 @@
         </div>
 
       </div>  
-      <table class="table mt-5" style="text-align:center">
+      <table id="my_table" class="table mt-5" style="text-align:center">
         <thead>
           <tr>
             <th scope="col">No</th>
@@ -79,9 +80,11 @@
           </tr>
         </tbody>
     </table>
+    <h4 class="text-center" v-show="tasks.length == 0">No Pending Tasks</h4>
 
     <div></div>
 
+  </div>
   </div>
 </template>
 
