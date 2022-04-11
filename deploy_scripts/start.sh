@@ -1,4 +1,6 @@
 #!/bin/bash
-source /home/ec2-user/.bash_profile
+source /var/www/html/.bash_profile
 cd /home/ec2-user/todo-app
-NODE_ENV=production npm run build
+npm run build
+cd dist
+service httpd start
