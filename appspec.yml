@@ -19,6 +19,4 @@ hooks:
   ApplicationStart:
     - location: deploy_scripts/start.sh
       runas: ec2-user
-  ValidateService:
-    - location: deploy_scripts/validate.sh
-      runas: ec2-user
+
