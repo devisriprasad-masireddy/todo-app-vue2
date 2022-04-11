@@ -1,4 +1,4 @@
 #!/bin/bash
-source /home/ec2-user/.bash_profile
-cd /home/ec2-user/todo-app
+source /var/www/html/.bash_profile
+cd /var/www/html/todo-app
 curl localhost:8080
