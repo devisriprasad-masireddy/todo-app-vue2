@@ -7,16 +7,16 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ec2-user
-    group: ec2-user
+    owner: ubuntu
+    group: ubuntu
 hooks:
   BeforeInstall:
     - location: deploy_scripts/install.sh
-      runas: ec2-user
+      runas: ubuntu
   ApplicationStop:
     - location: deploy_scripts/stop.sh
-      runas: ec2-user
+      runas: ubuntu
   ApplicationStart:
     - location: deploy_scripts/start.sh
-      runas: ec2-user
+      runas: ubuntu
 
