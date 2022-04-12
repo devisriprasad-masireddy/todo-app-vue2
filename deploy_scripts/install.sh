@@ -8,4 +8,3 @@ then
    . ~/.nvm/nvm.sh
    nvm install node
 fi
-cd /var/www/html/public
